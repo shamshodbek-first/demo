@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;  
+  }
+body{
+    background-color: #f6f6f6;
+    background: linear-gradient(to left,rgb(2, 19, 210),rgb(217, 26, 26));
+    animation: colorChange 5s linear infinite; 
+    transition: transform 0.5s ease;
+    background-size: 200% 100%;
+}
+.h3{
+text-align: center;
+text-shadow: #263055;
+text-size-adjust: #0000;
+}
+h3 {
+    font-size: 40px;
+    font-family: Verdana;
+    display: inline-flex;
+    background: linear-gradient(to right, #ff0000, #ff9e00, #00ff00,yellow);
+    background-size: 200% 100%;
+    background-position: 0 0;
+    color: transparent  ;
+    -webkit-background-clip: text; 
+    animation: colorChange 4s linear infinite; 
+    transition: transform 0.3s ease;
+    margin-top: 0.5%;
+  
+}
+
+
+@keyframes colorChange {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+  html{
+    font-family: Poppins;
+    color: #f0f0f0;
+  }
+  h1{
+    color: white;
+  }
+  h3:hover {
+    transform: scale(1.1); 
+}
+.card:hover::before {
+    transform: scale(1.2); 
+}
+  .card{
+    margin: 0 auto;
+    padding: 2em;
+    width: 300px;
+    background: #263055;
+    text-align: center;
+    border-radius: 55px;
+    position: relative;
+    margin-left: 1%;
+    margin-top: 3%;
+    transition: transform 0.3s ease;
+  }
+  
+  @property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  
+  .card::after, .card::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #00ff99, #006aff, #ff0095, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 55px;
+    animation: 3s spin linear infinite;
+  }
+button::after,button::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right,#0000ff, #ff0000, #ff9e00, #00ff00, #0000ff);
+  background-size: 200% 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 50px;
+  animation: 4s colorChange linear infinite ;
+  transition: transform 0.3s ease;
+   
+}
+
+button::before{
+  filter: blur(1.9rem);
+  opacity: 0.5;
+}
+button:hover {
+  transform: scale(1.2);
+}
+img:hover{
+transform: scale(1.1);
+}
+
+.card::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+  }
+  
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
+  }
+section{
+    display: inline-flex;
+}
+
+
+button{
+    margin: 0 auto;
+    background:blue;
+    text-align: center;
+    border-radius: 50px;
+    position: relative;
+    margin-left: 2%;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    transition: transform 0.4s ease;
+    width: 40%;
+    height: 40px;
+    z-index: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 120%;
+    color:black;
+    text-shadow: darkblue;
+}
+img{
+  width: 70%;
+  height: 25%;
+  border-radius: 55px;
+  padding: 7;
+  transition: transform 0.4s ease;
+}
+p{
+  font-family: Georgia;
+  
+}
+h1{
+  color:yellow;
+  text-shadow: black;
+  font-style: italic;
+}
