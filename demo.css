@@ -14,9 +14,10 @@ text-align: center;
 text-shadow: #263055;
 text-size-adjust: #0000;
 }
-h3 {
+  h3 {
+    font-weight: bold;
     font-size: 40px;
-    font-family: Verdana;
+    font-family: 'Times New Roman';
     display: inline-flex;
     background: linear-gradient(to right, #ff0000, #ff9e00, #00ff00,yellow);
     background-size: 200% 100%;
@@ -181,4 +182,8 @@ a{
 }
 .b{
   font-size: 50%
+}
+
+a:hover{
+opacity: 0.6;
 }
